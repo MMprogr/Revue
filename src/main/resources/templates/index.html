@@ -1,0 +1,22 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>revue</title>
+    <link rel="stylesheet" href="css/main.css" th:href="@{/css/main.css}"/>
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,700,800" rel="stylesheet"/>
+    <script
+            src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="dashboard">
+    <div th:replace="fragments/dashboard :: dashboard"></div>
+</div>
+<div id="main">
+    <div th:replace="fragments/reviews/reviews :: reviews"></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<div th:fragment="reviews-tools" xmlns:th="http://www.thymeleaf.org" th:remove="tag">
+    <div class="panel">
+        <div class="content">
+            <div class="categories">
+                Sortuj według:
+                <ul>
+                    <li onclick="sortReviews('best')">Najlepsze</li>
+                    <li onclick="sortReviews('newest')" class="active">Najnowsze</li>
+                    <li onclick="sortReviews('favorite')"> Ulubione</li>
+                </ul>
+            </div>
+            <div class="search">
+                <input type="text" name="search" id="search" placeholder="Wyszukaj..."/>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,7 @@
+<div th:fragment="reviews" xmlns:th="http://www.thymeleaf.org" th:remove="tag">
+    <div th:replace="fragments/reviews/reviews-tools :: reviews-tools"></div>
+    <div class="reviews">
+        <div th:replace="fragments/reviews/reviews-list :: reviews-list"></div>
+    </div>
+    <script src="js/reviews-sorting.js"></script>
+</div>

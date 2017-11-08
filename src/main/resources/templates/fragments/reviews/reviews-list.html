@@ -1,0 +1,29 @@
+<div th:fragment="reviews-list" xmlns:th="http://www.thymeleaf.org" th:remove="tag">
+    <div class="review" th:each="review : ${reviews}">
+        <div class="background"
+             style="background-image: url(http://img.24tp.pl/wydarzenia/9159/1499448015601.jpg)"></div>
+        <div class="details">
+            <div class="quality">JAKOŚĆ RECENZJI: <span class="mark high" th:text="${review.quality}">50</span>
+            </div>
+            <div class="title" th:text="${review.title}">Tytul</div>
+            <span class="tag" th:text="${review.subject.type}">Film</span>
+            <span class="year" th:text="${review.subject.date}">2017</span>
+            <span class="genre" th:each="tag : ${review.subject.tags}" th:text="${tag}">Akcja</span>
+        </div>
+        <div class="content">
+            <div th:text="${review.summary}">Zawartosc</div>
+            <span class="read-on">czytaj dalej</span>
+        </div>
+        <div class="footer">
+            <div class="credentials">
+                <img th:src="${review.user.imageUrl}" alt="avatar" class="avatar"/>
+                <span class="username" th:text="${review.user.username}">Nazwa uzytkownika</span>
+                <span class="points" th:text="${review.user.score}">237</span>
+            </div>
+            <div class="rating">
+                <span class="text">Oceniam film na</span>
+                <div class="rate" th:text="${review.rating}+'/100'">80/100</div>
+            </div>
+        </div>
+    </div>
+</div>
